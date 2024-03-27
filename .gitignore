@@ -1,1 +1,56 @@
 node_modules
+# Next.js build output
+.next/
+out/
+
+# Next.js specific files
+*.hot-update.json
+*.hot-update.js
+
+# Cache directories
+.cache/
+
+vendor/
+# Build files:
+
+dist/
+build/
+*.min.js
+*.min.css
+# Logs and databases:
+
+*.log
+*.sql
+*.sqlite
+# OS generated files:
+
+.DS_Store
+Thumbs.db
+# Editor files:
+
+.idea/
+*.iml
+*.swp
+# Environment files:
+
+.env
+.venv
+env/
+# Temporary files:
+
+*.tmp
+*.bak
+# System files:
+
+.DS_Store
+Thumbs.db
+# Sensitive data files:
+
+*.pem
+*.cert
+*.key
+# User-specific config files:
+
+*.suo
+*.user
+*.cache
