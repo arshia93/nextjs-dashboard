@@ -8,6 +8,7 @@ export default async function InvoicesTable({
   query,
   currentPage,
 }: {
+  // query and currentPage pass in the invoices that match the query
   query: string;
   currentPage: number;
 }) {
@@ -79,6 +80,7 @@ export default async function InvoicesTable({
             </thead>
             <tbody className="bg-white">
               {invoices?.map((invoice) => (
+                // customer column with image and name
                 <tr
                   key={invoice.id}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
@@ -95,18 +97,23 @@ export default async function InvoicesTable({
                       <p>{invoice.name}</p>
                     </div>
                   </td>
+                  {/* email column */}
                   <td className="whitespace-nowrap px-3 py-3">
                     {invoice.email}
                   </td>
+                  {/* amount column */}
                   <td className="whitespace-nowrap px-3 py-3">
                     {formatCurrency(invoice.amount)}
                   </td>
+                  {/* invoice date column */}
                   <td className="whitespace-nowrap px-3 py-3">
                     {formatDateToLocal(invoice.date)}
                   </td>
+                  {/* invoice status */}
                   <td className="whitespace-nowrap px-3 py-3">
                     <InvoiceStatus status={invoice.status} />
                   </td>
+                  {/* buttons */}
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex justify-end gap-3">
                       <UpdateInvoice id={invoice.id} />

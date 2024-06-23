@@ -7,6 +7,7 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
+// page components can accept searchParams so you can pass the current url parameter into the page
 export default async function Page({
   searchParams,
 }: {
